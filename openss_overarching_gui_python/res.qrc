@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="images">
+    <file>logo.webp</file>
+    <file>SenseTime__Dark_Background_.webp</file>
+    <file>menuside2.webp</file>
+  </qresource>
+</RCC>
