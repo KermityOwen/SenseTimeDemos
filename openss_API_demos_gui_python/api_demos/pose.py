@@ -68,3 +68,5 @@ def main(ACCESS_KEY_ID, ACCESS_KEY_SECRET):
 
             print("area_points_array")
             editimage.showPoseImage(file_path, area_points_array, pose_points_array)
+
+    return False

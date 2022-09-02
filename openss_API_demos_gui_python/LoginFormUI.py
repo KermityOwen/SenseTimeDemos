@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
 
-################################################################################
-## Form generated from reading UI file 'LoginForm.ui'
-##
-## Created by: Qt User Interface Compiler version 6.3.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -37,7 +29,7 @@ class Ui_MainWindow(object):
         self.bgImg = QLabel(self.widget)
         self.bgImg.setObjectName(u"bgImg")
         self.bgImg.setGeometry(QRect(10, 30, 200, 430))
-        self.bgImg.setStyleSheet(u"border-image: url(:/images/menuside2.webp);\n"
+        self.bgImg.setStyleSheet(u"border-image: url(:/images/images/menuside2.webp);\n"
 "border-top-left-radius: 60px;")
         self.bgImg.setScaledContents(False)
         self.fadeSolid = QLabel(self.widget)
@@ -102,7 +94,7 @@ class Ui_MainWindow(object):
         self.logoImg = QLabel(self.widget)
         self.logoImg.setObjectName(u"logoImg")
         self.logoImg.setGeometry(QRect(20, 105, 161, 51))
-        self.logoImg.setStyleSheet(u"border-image: url(:/images/logo.webp)")
+        self.logoImg.setStyleSheet(u"border-image: url(:/images/images/logo.webp)")
         self.exitButton = QPushButton(self.widget)
         self.exitButton.setObjectName(u"exitButton")
         self.exitButton.setGeometry(QRect(20, 430, 20, 20))

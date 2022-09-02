@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
 
-################################################################################
-## Form generated from reading UI file 'LoginForm.ui'
-##
-## Created by: Qt User Interface Compiler version 6.3.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -15,97 +7,130 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QStatusBar, QWidget)
-import res_rc
+from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QPushButton,
+    QSizePolicy, QStackedWidget, QWidget)
+import res
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(625, 565)
+        MainWindow.resize(800, 600)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.widget = QWidget(self.centralwidget)
         self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 30, 550, 500))
-        self.widget.setMinimumSize(QSize(0, 0))
-        self.bgImg = QLabel(self.widget)
-        self.bgImg.setObjectName(u"bgImg")
-        self.bgImg.setGeometry(QRect(10, 30, 200, 430))
-        self.bgImg.setStyleSheet(u"border-image: url(:/images/menuside2.webp);\n"
-"border-top-left-radius: 60px;")
-        self.bgImg.setScaledContents(False)
-        self.fadeSolid = QLabel(self.widget)
-        self.fadeSolid.setObjectName(u"fadeSolid")
-        self.fadeSolid.setGeometry(QRect(10, 30, 530, 430))
-        self.fadeSolid.setStyleSheet(u"background-color: rgba(200,200,200,255);\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 80), stop:0.38 rgba(230, 230, 230, 255));\n"
-"border-bottom-right-radius: 60px;\n"
-"border-top-left-radius: 60px;")
-        self.Title = QLabel(self.widget)
-        self.Title.setObjectName(u"Title")
-        self.Title.setGeometry(QRect(300, 70, 181, 35))
+        self.widget.setGeometry(QRect(30, 30, 750, 530))
+        self.sideBG = QLabel(self.widget)
+        self.sideBG.setObjectName(u"sideBG")
+        self.sideBG.setGeometry(QRect(182, 38, 490, 433))
+        self.sideBG.setStyleSheet(u"background-color: rgba(80, 100, 130, 255);\n"
+"border-bottom-right-radius: 35px;\n"
+"border-top: 10px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(100, 120, 150, 255), stop:1 rgba(80, 100, 130, 255));\n"
+"border-bottom:  10px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:1 rgba(100, 120, 150, 255), stop:0 rgba(80, 100, 130, 255));\n"
+"border-right: 10px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(100, 120, 150, 255), stop:0 rgba(80, 100, 130, 255));")
+        self.BG = QLabel(self.widget)
+        self.BG.setObjectName(u"BG")
+        self.BG.setGeometry(QRect(30, 30, 651, 450))
+        self.BG.setStyleSheet(u"background-color: rgba(100, 120, 150, 255);\n"
+"border-top-left-radius: 40px;\n"
+"border-bottom-right-radius: 50px;\n"
+"border: 1px solid rgb(0, 0, 76);")
+        self.logo = QLabel(self.widget)
+        self.logo.setObjectName(u"logo")
+        self.logo.setGeometry(QRect(40, 75, 130, 40))
+        self.logo.setStyleSheet(u"border-image: url(:/images/images/logo.webp)")
+        self.logoBG = QLabel(self.widget)
+        self.logoBG.setObjectName(u"logoBG")
+        self.logoBG.setGeometry(QRect(30, 60, 150, 70))
+        self.logoBG.setStyleSheet(u"background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:0.20197 rgba(255,255,255, 40), stop:0.8 rgba(255, 255, 255, 40), stop:1 rgba(0, 0, 0, 0))")
+        self.linebar = QLabel(self.widget)
+        self.linebar.setObjectName(u"linebar")
+        self.linebar.setGeometry(QRect(180, 30, 2, 450))
+        self.linebar.setStyleSheet(u"background-color: rgba(0, 0, 0, 100);")
+        self.alignButton = QPushButton(self.widget)
+        self.alignButton.setObjectName(u"alignButton")
+        self.alignButton.setGeometry(QRect(30, 150, 150, 51))
         font = QFont()
-        font.setFamilies([u"STHeiti"])
-        font.setPointSize(30)
-        font.setBold(True)
-        self.Title.setFont(font)
-        self.Title.setStyleSheet(u"color: rgb(0, 50, 100)")
-        self.KeyInput = QLineEdit(self.widget)
-        self.KeyInput.setObjectName(u"KeyInput")
-        self.KeyInput.setGeometry(QRect(290, 180, 200, 35))
-        font1 = QFont()
-        font1.setFamilies([u"Gurmukhi Sangam MN"])
-        font1.setPointSize(15)
-        font1.setBold(False)
-        font1.setItalic(False)
-        self.KeyInput.setFont(font1)
-        self.KeyInput.setStyleSheet(u"background-color: rgba(0,0,0,0);\n"
+        font.setFamilies([u".Lucida Grande UI"])
+        self.alignButton.setFont(font)
+        self.alignButton.setStyleSheet(u"QPushButton{\n"
+"background-color: rgba(100, 120, 150, 255);\n"
 "border: none;\n"
-"border-bottom: 2px solid rgba(100, 100, 100, 100);\n"
-"color: rgba(0,0,0,200);\n"
-"padding-bottom: 7px;")
-        self.SecretInput = QLineEdit(self.widget)
-        self.SecretInput.setObjectName(u"SecretInput")
-        self.SecretInput.setGeometry(QRect(290, 260, 200, 35))
-        self.SecretInput.setFont(font1)
-        self.SecretInput.setStyleSheet(u"background-color: rgba(0,0,0,0);\n"
-"border: none;\n"
-"border-bottom: 2px solid rgba(100, 100, 100, 100);\n"
-"color: rgba(0,0,0,200);\n"
-"padding-bottom: 7px;")
-        self.inpButton = QPushButton(self.widget)
-        self.inpButton.setObjectName(u"inpButton")
-        self.inpButton.setGeometry(QRect(310, 350, 155, 50))
-        font2 = QFont()
-        font2.setFamilies([u"PT Sans"])
-        font2.setPointSize(20)
-        self.inpButton.setFont(font2)
-        self.inpButton.setStyleSheet(u"QPushButton{\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(180, 100, 0, 255), stop:1 rgba(150, 0, 0, 255));\n"
-"	border-radius: 10px;\n"
-"	color: rgba(255,255,255,255);\n"
+"border-left: 1px solid rgba(0,0,0,200);\n"
+"color: white;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(180, 150, 50, 255), stop:1 rgba(150, 50, 50, 255));\n"
-"	font-color: rgba(0,0,0,255);\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 40), stop:1 rgba(100, 120, 150, 255));\n"
+"border-left: 3px solid rgba(0,0,0,200)\n"
 "}")
-        self.logoBar = QLabel(self.widget)
-        self.logoBar.setObjectName(u"logoBar")
-        self.logoBar.setGeometry(QRect(10, 95, 241, 71))
-        self.logoBar.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.65 rgba(0, 0, 0, 40), stop:0.90 rgba(230, 230, 230, 255))")
-        self.logoImg = QLabel(self.widget)
-        self.logoImg.setObjectName(u"logoImg")
-        self.logoImg.setGeometry(QRect(20, 105, 161, 51))
-        self.logoImg.setStyleSheet(u"border-image: url(:/images/logo.webp)")
+        self.detectButton = QPushButton(self.widget)
+        self.detectButton.setObjectName(u"detectButton")
+        self.detectButton.setGeometry(QRect(30, 200, 150, 51))
+        self.detectButton.setFont(font)
+        self.detectButton.setStyleSheet(u"QPushButton{\n"
+"background-color: rgba(100, 120, 150, 255);\n"
+"border: none;\n"
+"border-left: 1px solid rgba(0,0,0,200);\n"
+"color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 40), stop:1 rgba(100, 120, 150, 255));\n"
+"border-left: 3px solid rgba(0,0,0,200)\n"
+"}")
+        self.compareButton = QPushButton(self.widget)
+        self.compareButton.setObjectName(u"compareButton")
+        self.compareButton.setGeometry(QRect(30, 250, 150, 51))
+        self.compareButton.setFont(font)
+        self.compareButton.setStyleSheet(u"QPushButton{\n"
+"background-color: rgba(100, 120, 150, 255);\n"
+"border: none;\n"
+"border-left: 1px solid rgba(0,0,0,200);\n"
+"color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 40), stop:1 rgba(100, 120, 150, 255));\n"
+"border-left: 3px solid rgba(0,0,0,200)\n"
+"}")
+        self.ocrButton = QPushButton(self.widget)
+        self.ocrButton.setObjectName(u"ocrButton")
+        self.ocrButton.setGeometry(QRect(30, 300, 150, 51))
+        self.ocrButton.setFont(font)
+        self.ocrButton.setStyleSheet(u"QPushButton{\n"
+"background-color: rgba(100, 120, 150, 255);\n"
+"border: none;\n"
+"border-left: 1px solid rgba(0,0,0,200);\n"
+"color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 40), stop:1 rgba(100, 120, 150, 255));\n"
+"border-left: 3px solid rgba(0,0,0,200)\n"
+"}")
+        self.poseButton = QPushButton(self.widget)
+        self.poseButton.setObjectName(u"poseButton")
+        self.poseButton.setGeometry(QRect(30, 350, 150, 51))
+        self.poseButton.setFont(font)
+        self.poseButton.setStyleSheet(u"QPushButton{\n"
+"background-color: rgba(100, 120, 150, 255);\n"
+"border: none;\n"
+"border-left: 1px solid rgba(0,0,0,200);\n"
+"color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 40), stop:1 rgba(100, 120, 150, 255));\n"
+"border-left: 3px solid rgba(0,0,0,200)\n"
+"}")
         self.exitButton = QPushButton(self.widget)
         self.exitButton.setObjectName(u"exitButton")
-        self.exitButton.setGeometry(QRect(20, 430, 20, 20))
-        font3 = QFont()
-        font3.setPointSize(12)
-        self.exitButton.setFont(font3)
+        self.exitButton.setGeometry(QRect(40, 450, 20, 20))
+        font1 = QFont()
+        font1.setPointSize(12)
+        self.exitButton.setFont(font1)
         self.exitButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(197, 0, 0);\n"
 "	border-radius: 8px;\n"
@@ -118,47 +143,208 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	background-color: rgba(220, 50, 50, 200)\n"
 "}")
-        self.label = QLabel(self.widget)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(278, 410, 220, 20))
+        self.mainPages = QStackedWidget(self.widget)
+        self.mainPages.setObjectName(u"mainPages")
+        self.mainPages.setGeometry(QRect(185, 38, 490, 431))
+        font2 = QFont()
+        font2.setKerning(True)
+        self.mainPages.setFont(font2)
+        self.mainPages.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.alignPage = QWidget()
+        self.alignPage.setObjectName(u"alignPage")
+        self.align_desc = QLabel(self.alignPage)
+        self.align_desc.setObjectName(u"align_desc")
+        self.align_desc.setGeometry(QRect(25, 60, 451, 80))
+        font3 = QFont()
+        font3.setFamilies([u"Helvetica Neue"])
+        font3.setPointSize(15)
+        self.align_desc.setFont(font3)
+        self.align_desc.setStyleSheet(u"color: rgb(200, 255, 240);")
+        self.align_desc.setTextFormat(Qt.RichText)
+        self.align_desc.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.align_desc.setWordWrap(True)
+        self.alignPost = QLabel(self.alignPage)
+        self.alignPost.setObjectName(u"alignPost")
+        self.alignPost.setGeometry(QRect(265, 130, 175, 220))
+        self.alignPost.setStyleSheet(u"border-radius: 40px;\n"
+"border-image: url(:/images/images/source_image_align.webp);")
+        self.alignPre = QLabel(self.alignPage)
+        self.alignPre.setObjectName(u"alignPre")
+        self.alignPre.setGeometry(QRect(35, 130, 175, 220))
+        self.alignPre.setStyleSheet(u"border-radius: 40px;\n"
+"border-image: url(:/images/images/source_image.webp);")
+        self.alignTitle = QLabel(self.alignPage)
+        self.alignTitle.setObjectName(u"alignTitle")
+        self.alignTitle.setGeometry(QRect(85, 10, 341, 40))
         font4 = QFont()
-        font4.setPointSize(15)
-        self.label.setFont(font4)
-        self.label.setStyleSheet(u"color: rgba(255, 0, 0,200)")
-        self.label.setAlignment(Qt.AlignCenter)
-        self.bgImg.raise_()
-        self.logoBar.raise_()
-        self.fadeSolid.raise_()
-        self.Title.raise_()
-        self.KeyInput.raise_()
-        self.SecretInput.raise_()
-        self.inpButton.raise_()
-        self.logoImg.raise_()
+        font4.setFamilies([u"Helvetica Neue"])
+        font4.setPointSize(23)
+        self.alignTitle.setFont(font4)
+        self.alignTitle.setStyleSheet(u"color: white\n"
+"")
+        self.alignTitle.setAlignment(Qt.AlignCenter)
+        self.alignDemo = QPushButton(self.alignPage)
+        self.alignDemo.setObjectName(u"alignDemo")
+        self.alignDemo.setGeometry(QRect(180, 370, 120, 40))
+        self.alignDemo.setStyleSheet(u"QPushButton{\n"
+"border-radius: 12px;\n"
+"border: 2px solid white;\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));\n"
+"color: rgba(255, 255, 255,255)\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));\n"
+"}")
+        self.label = QLabel(self.alignPage)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(218, 240, 60, 16))
+        font5 = QFont()
+        font5.setBold(True)
+        self.label.setFont(font5)
+        self.mainPages.addWidget(self.alignPage)
+        self.detectPage = QWidget()
+        self.detectPage.setObjectName(u"detectPage")
+        self.detectTitle = QLabel(self.detectPage)
+        self.detectTitle.setObjectName(u"detectTitle")
+        self.detectTitle.setGeometry(QRect(85, 10, 341, 40))
+        self.detectTitle.setFont(font4)
+        self.detectTitle.setStyleSheet(u"color: white\n"
+"")
+        self.detectTitle.setAlignment(Qt.AlignCenter)
+        self.detectPre = QLabel(self.detectPage)
+        self.detectPre.setObjectName(u"detectPre")
+        self.detectPre.setGeometry(QRect(5, 160, 231, 171))
+        self.detectPre.setStyleSheet(u"border-radius: 40px;\n"
+"border-image: url(:/images/images/source_group.webp);")
+        self.detectDesc = QLabel(self.detectPage)
+        self.detectDesc.setObjectName(u"detectDesc")
+        self.detectDesc.setGeometry(QRect(25, 60, 451, 80))
+        self.detectDesc.setFont(font3)
+        self.detectDesc.setStyleSheet(u"color: rgb(200, 255, 240);")
+        self.detectDesc.setTextFormat(Qt.RichText)
+        self.detectDesc.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.detectDesc.setWordWrap(True)
+        self.detectDemo = QPushButton(self.detectPage)
+        self.detectDemo.setObjectName(u"detectDemo")
+        self.detectDemo.setGeometry(QRect(180, 370, 120, 40))
+        self.detectDemo.setStyleSheet(u"QPushButton{\n"
+"border-radius: 12px;\n"
+"border: 2px solid white;\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));\n"
+"color: rgba(255, 255, 255,255)\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));\n"
+"}")
+        self.detectPost = QLabel(self.detectPage)
+        self.detectPost.setObjectName(u"detectPost")
+        self.detectPost.setGeometry(QRect(245, 160, 231, 171))
+        self.detectPost.setStyleSheet(u"border-radius: 40px;\n"
+"border-image: url(:/images/images/source_group_detect.webp)")
+        self.mainPages.addWidget(self.detectPage)
+        self.comparePage = QWidget()
+        self.comparePage.setObjectName(u"comparePage")
+        self.compareDemo = QPushButton(self.comparePage)
+        self.compareDemo.setObjectName(u"compareDemo")
+        self.compareDemo.setGeometry(QRect(180, 370, 120, 40))
+        self.compareDemo.setStyleSheet(u"QPushButton{\n"
+"border-radius: 12px;\n"
+"border: 2px solid white;\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));\n"
+"color: rgba(255, 255, 255,255)\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));\n"
+"}")
+        self.mainPages.addWidget(self.comparePage)
+        self.ocrPage = QWidget()
+        self.ocrPage.setObjectName(u"ocrPage")
+        self.ocrDemo = QPushButton(self.ocrPage)
+        self.ocrDemo.setObjectName(u"ocrDemo")
+        self.ocrDemo.setGeometry(QRect(180, 370, 120, 40))
+        self.ocrDemo.setStyleSheet(u"QPushButton{\n"
+"border-radius: 12px;\n"
+"border: 2px solid white;\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));\n"
+"color: rgba(255, 255, 255,255)\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));\n"
+"}")
+        self.mainPages.addWidget(self.ocrPage)
+        self.posePage = QWidget()
+        self.posePage.setObjectName(u"posePage")
+        self.detectDemo_3 = QPushButton(self.posePage)
+        self.detectDemo_3.setObjectName(u"detectDemo_3")
+        self.detectDemo_3.setGeometry(QRect(180, 370, 120, 40))
+        self.detectDemo_3.setStyleSheet(u"QPushButton{\n"
+"border-radius: 12px;\n"
+"border: 2px solid white;\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));\n"
+"color: rgba(255, 255, 255,255)\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));\n"
+"}")
+        self.mainPages.addWidget(self.posePage)
+        self.BG.raise_()
+        self.logoBG.raise_()
+        self.logo.raise_()
+        self.linebar.raise_()
+        self.alignButton.raise_()
+        self.detectButton.raise_()
+        self.compareButton.raise_()
+        self.ocrButton.raise_()
+        self.poseButton.raise_()
+        self.sideBG.raise_()
         self.exitButton.raise_()
-        self.label.raise_()
+        self.mainPages.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QStatusBar(MainWindow)
-        self.statusbar.setObjectName(u"statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+
+        self.mainPages.setCurrentIndex(4)
+
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.bgImg.setText("")
-        self.fadeSolid.setText("")
-        self.Title.setText(QCoreApplication.translate("MainWindow", u"LOGIN KEYS", None))
-        self.KeyInput.setText("")
-        self.KeyInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"API Key ID...", None))
-        self.SecretInput.setText("")
-        self.SecretInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"API Key Secret...", None))
-        self.inpButton.setText(QCoreApplication.translate("MainWindow", u"Validate Keys", None))
-        self.logoBar.setText("")
-        self.logoImg.setText("")
+        self.sideBG.setText("")
+        self.BG.setText("")
+        self.logo.setText("")
+        self.logoBG.setText("")
+        self.linebar.setText("")
+        self.alignButton.setText(QCoreApplication.translate("MainWindow", u"Facial Alignment\n"
+"Demonstration", None))
+        self.detectButton.setText(QCoreApplication.translate("MainWindow", u"Facial Detection\n"
+" Demonstration", None))
+        self.compareButton.setText(QCoreApplication.translate("MainWindow", u"Face Comparing\n"
+"Demonstration", None))
+        self.ocrButton.setText(QCoreApplication.translate("MainWindow", u"Text Recognition\n"
+" Demonstration", None))
+        self.poseButton.setText(QCoreApplication.translate("MainWindow", u"Pose Recognition\n"
+" Demonstration", None))
         self.exitButton.setText(QCoreApplication.translate("MainWindow", u"X", None))
-        self.label.setText("")
+        self.align_desc.setText(QCoreApplication.translate("MainWindow", u"SenseTime's facial keypoint framework can identify all the most important keypoints of the face. This framework is only applicable to one face at a time.", None))
+        self.alignPost.setText("")
+        self.alignPre.setText("")
+        self.alignTitle.setText(QCoreApplication.translate("MainWindow", u"Facial Keypoint Demonstration", None))
+        self.alignDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"----->", None))
+        self.detectTitle.setText(QCoreApplication.translate("MainWindow", u"Facial Detection Demonstration", None))
+        self.detectPre.setText("")
+        self.detectDesc.setText(QCoreApplication.translate("MainWindow", u"SenseTime's facial detection system can identify the amount of faces in an image and locate them. This is an efficient and fast model and is usually used for frame-by-frame video processing.", None))
+        self.detectDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
+        self.detectPost.setText("")
+        self.compareDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
+        self.ocrDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
+        self.detectDemo_3.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
     # retranslateUi
 

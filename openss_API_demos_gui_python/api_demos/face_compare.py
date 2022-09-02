@@ -57,3 +57,5 @@ def main(ACCESS_KEY_ID, ACCESS_KEY_SECRET):
 
         response_data = response.get("data")
         editimage.showCompare(file_path_1, file_path_2, response_data)
+
+    return False

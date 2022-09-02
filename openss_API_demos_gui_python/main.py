@@ -63,12 +63,16 @@ class MainWindow(QMainWindow):
         # Reimplement as enum or switch case when available
         if self.runningDemo == False:
             if demo_type == "alignment":
+                self.runningDemo = True
                 self.runningDemo = alignment.main(ACCESS_KEY_ID=self.access_key, ACCESS_KEY_SECRET=self.access_secret)
             elif demo_type == "detect":
+                self.runningDemo = True
                 self.runningDemo = detect.main(ACCESS_KEY_ID=self.access_key, ACCESS_KEY_SECRET=self.access_secret)
             elif demo_type == "compare":
+                self.runningDemo = True
                 self.runningDemo = face_compare.main(ACCESS_KEY_ID=self.access_key, ACCESS_KEY_SECRET=self.access_secret)
             elif demo_type == "pose":
+                self.runningDemo = True
                 self.runningDemo = pose.main(ACCESS_KEY_ID=self.access_key, ACCESS_KEY_SECRET=self.access_secret)
             else:
                 print("No such demo")

@@ -68,4 +68,4 @@ def main(ACCESS_KEY_ID, ACCESS_KEY_SECRET):
                 for i in point_list_data:
                     points3d_array.append([int(i["x"]), int(i["y"])])
                 editimage.showPointImage(file_path, points3d_array)
-    return True
+    return False

@@ -1,7 +1,10 @@
 <RCC>
   <qresource prefix="images">
-    <file>logo.webp</file>
-    <file>SenseTime__Dark_Background_.webp</file>
-    <file>menuside2.webp</file>
+    <file>images/source_group.webp</file>
+    <file>images/source_group_detect.webp</file>
+    <file>images/menuside2.webp</file>
+    <file>images/source_image_align.webp</file>
+    <file>images/logo.webp</file>
+    <file>images/source_image.webp</file>
   </qresource>
 </RCC>

@@ -72,7 +72,7 @@ border: 1px solid rgb(0, 0, 76);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image: url(:/images/logo.webp);</string>
+      <string notr="true">border-image: url(:/images/images/logo.webp)</string>
      </property>
      <property name="text">
       <string/>
@@ -128,7 +128,8 @@ border: 1px solid rgb(0, 0, 76);</string>
       <string notr="true">QPushButton{
 background-color: rgba(100, 120, 150, 255);
 border: none;
-border-left: 1px solid rgba(0,0,0,200)
+border-left: 1px solid rgba(0,0,0,200);
+color: white;
 }
 
 QPushButton:hover{
@@ -159,7 +160,8 @@ Demonstration</string>
       <string notr="true">QPushButton{
 background-color: rgba(100, 120, 150, 255);
 border: none;
-border-left: 1px solid rgba(0,0,0,200)
+border-left: 1px solid rgba(0,0,0,200);
+color: white;
 }
 
 QPushButton:hover{
@@ -190,7 +192,8 @@ border-left: 3px solid rgba(0,0,0,200)
       <string notr="true">QPushButton{
 background-color: rgba(100, 120, 150, 255);
 border: none;
-border-left: 1px solid rgba(0,0,0,200)
+border-left: 1px solid rgba(0,0,0,200);
+color: white
 }
 
 QPushButton:hover{
@@ -221,7 +224,8 @@ Demonstration</string>
       <string notr="true">QPushButton{
 background-color: rgba(100, 120, 150, 255);
 border: none;
-border-left: 1px solid rgba(0,0,0,200)
+border-left: 1px solid rgba(0,0,0,200);
+color: white
 }
 
 QPushButton:hover{
@@ -252,7 +256,8 @@ border-left: 3px solid rgba(0,0,0,200)
       <string notr="true">QPushButton{
 background-color: rgba(100, 120, 150, 255);
 border: none;
-border-left: 1px solid rgba(0,0,0,200)
+border-left: 1px solid rgba(0,0,0,200);
+color: white
 }
 
 QPushButton:hover{
@@ -297,6 +302,363 @@ QPushButton:hover{
       <string>X</string>
      </property>
     </widget>
+    <widget class="QStackedWidget" name="mainPages">
+     <property name="geometry">
+      <rect>
+       <x>185</x>
+       <y>38</y>
+       <width>490</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
+     <widget class="QWidget" name="alignPage">
+      <widget class="QLabel" name="align_desc">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>60</y>
+         <width>451</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Helvetica Neue</family>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(200, 255, 240);</string>
+       </property>
+       <property name="text">
+        <string>SenseTime's facial keypoint framework can identify all the most important keypoints of the face. This framework is only applicable to one face at a time.</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="alignPost">
+       <property name="geometry">
+        <rect>
+         <x>265</x>
+         <y>130</y>
+         <width>175</width>
+         <height>220</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 40px;
+border-image: url(:/images/images/source_image_align.webp);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="alignPre">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>130</y>
+         <width>175</width>
+         <height>220</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 40px;
+border-image: url(:/images/images/source_image.webp);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="alignTitle">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>10</y>
+         <width>341</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Helvetica Neue</family>
+         <pointsize>23</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white
+</string>
+       </property>
+       <property name="text">
+        <string>Facial Keypoint Demonstration</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="alignDemo">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>370</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+border-radius: 12px;
+border: 2px solid white;
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));
+color: rgba(255, 255, 255,255)
+}
+
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));
+}</string>
+       </property>
+       <property name="text">
+        <string>Start Demo</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>218</x>
+         <y>240</y>
+         <width>60</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>-----&gt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="detectPage">
+      <widget class="QLabel" name="detectTitle">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>10</y>
+         <width>341</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Helvetica Neue</family>
+         <pointsize>23</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white
+</string>
+       </property>
+       <property name="text">
+        <string>Facial Detection Demonstration</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectPre">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>160</y>
+         <width>231</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 40px;
+border-image: url(:/images/images/source_group.webp);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectDesc">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>60</y>
+         <width>451</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Helvetica Neue</family>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(200, 255, 240);</string>
+       </property>
+       <property name="text">
+        <string>SenseTime's facial detection system can identify the amount of faces in an image and locate them. This is an efficient and fast model and is usually used for frame-by-frame video processing.</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="detectDemo">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>370</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+border-radius: 12px;
+border: 2px solid white;
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));
+color: rgba(255, 255, 255,255)
+}
+
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));
+}</string>
+       </property>
+       <property name="text">
+        <string>Start Demo</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectPost">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>160</y>
+         <width>231</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 40px;
+border-image: url(:/images/images/source_group_detect.webp)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="comparePage">
+      <widget class="QPushButton" name="compareDemo">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>370</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+border-radius: 12px;
+border: 2px solid white;
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));
+color: rgba(255, 255, 255,255)
+}
+
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));
+}</string>
+       </property>
+       <property name="text">
+        <string>Start Demo</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="ocrPage">
+      <widget class="QPushButton" name="ocrDemo">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>370</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+border-radius: 12px;
+border: 2px solid white;
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));
+color: rgba(255, 255, 255,255)
+}
+
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));
+}</string>
+       </property>
+       <property name="text">
+        <string>Start Demo</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="posePage">
+      <widget class="QPushButton" name="poseDemo">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>370</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+border-radius: 12px;
+border: 2px solid white;
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));
+color: rgba(255, 255, 255,255)
+}
+
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));
+}</string>
+       </property>
+       <property name="text">
+        <string>Start Demo</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
     <zorder>BG</zorder>
     <zorder>logoBG</zorder>
     <zorder>logo</zorder>
@@ -308,6 +670,7 @@ QPushButton:hover{
     <zorder>poseButton</zorder>
     <zorder>sideBG</zorder>
     <zorder>exitButton</zorder>
+    <zorder>mainPages</zorder>
    </widget>
   </widget>
  </widget>

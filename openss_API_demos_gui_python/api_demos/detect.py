@@ -16,7 +16,7 @@ token_url = "http://eco-open.study.sensetime.com/api/common/v1/token"
 # Image face detection request url
 url = "https://eco-open.study.sensetime.com/api/internal_sdk/v1/detect/face"
 # Image resource
-file_name = "capture.jpeg"
+file_name = "source_group.jpeg"
 file_path = os.path.join(".", file_name)
 
 def main(ACCESS_KEY_ID, ACCESS_KEY_SECRET):
@@ -65,4 +65,5 @@ def main(ACCESS_KEY_ID, ACCESS_KEY_SECRET):
                                            [aBounds["right"], aBounds["bottom"]], [aBounds["left"], aBounds["bottom"]],
                                            [aBounds["left"], aBounds["top"]]])
                 editimage.showLineImage(file_path, points_3d_array)
-            #print(points_3d_array)
+
+    return False
