@@ -240,6 +240,7 @@ class Ui_MainWindow(object):
         self.detectPost.setStyleSheet(u"border-radius: 40px;\n"
                                       "border-image: url(:/images/images/source_group_detect.webp)")
         self.mainPages.addWidget(self.detectPage)
+
         self.comparePage = QWidget()
         self.comparePage.setObjectName(u"comparePage")
         self.compareDemo = QPushButton(self.comparePage)
@@ -255,6 +256,34 @@ class Ui_MainWindow(object):
                                        "QPushButton:hover{\n"
                                        "background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));\n"
                                        "}")
+        self.compareDesc = QLabel(self.comparePage)
+        self.compareDesc.setObjectName(u"compareDesc")
+        self.compareDesc.setGeometry(QRect(25, 60, 451, 80))
+        self.compareDesc.setFont(font3)
+        self.compareDesc.setStyleSheet(u"color: rgb(200, 255, 240);")
+        self.compareDesc.setTextFormat(Qt.RichText)
+        self.compareDesc.setAlignment(Qt.AlignLeading | Qt.AlignLeft | Qt.AlignTop)
+        self.compareDesc.setWordWrap(True)
+        self.compareSuccess = QLabel(self.comparePage)
+        self.compareSuccess.setObjectName(u"compareSuccess")
+        self.compareSuccess.setGeometry(QRect(245, 160, 231, 171))
+        self.compareSuccess.setStyleSheet(u"border-radius: 40px;\n"
+                                        "border-top-left-radius: 0px;\n"
+                                        "border-image: url(:/images/images/compare_success.webp)")
+        self.compareTitle = QLabel(self.comparePage)
+        self.compareTitle.setObjectName(u"compareTitle")
+        self.compareTitle.setGeometry(QRect(75, 10, 361, 40))
+        self.compareTitle.setFont(font4)
+        self.compareTitle.setStyleSheet(u"color: white\n"
+                                         "")
+        self.compareTitle.setAlignment(Qt.AlignCenter)
+        self.compareFailed = QLabel(self.comparePage)
+        self.compareFailed.setObjectName(u"compareFailed")
+        self.compareFailed.setGeometry(QRect(10, 160, 231, 171))
+        self.compareFailed.setStyleSheet(u"border-radius: 40px;\n"
+                                       "border-top-left-radius: 0px;\n"
+                                       "border-image: url(:/images/images/compare_failed.webp)")
+
         self.mainPages.addWidget(self.comparePage)
         self.ocrPage = QWidget()
         self.ocrPage.setObjectName(u"ocrPage")
@@ -351,6 +380,12 @@ class Ui_MainWindow(object):
         self.detectDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
         self.detectPost.setText("")
         self.compareDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
+        self.compareDesc.setText(QCoreApplication.translate("MainWindow",
+                                                            u"SenseTime's facial comparison framework is used extract data about facial features and is used to compare faces, determining whether or not two images (each with a single face only) have the same person in them.",
+                                                            None))
+        self.compareSuccess.setText("")
+        self.compareTitle.setText(QCoreApplication.translate("MainWindow", u"Facial Comparison Demonstration", None))
+        self.compareFailed.setText("")
         self.ocrDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
         self.poseDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
     # retranslateUi

@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="images">
+    <file>images/compare_failed.webp</file>
+    <file>images/compare_success.webp</file>
     <file>images/source_group.webp</file>
     <file>images/source_group_detect.webp</file>
     <file>images/menuside2.webp</file>

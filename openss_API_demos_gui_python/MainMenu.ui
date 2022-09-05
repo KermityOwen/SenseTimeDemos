@@ -320,7 +320,7 @@ QPushButton:hover{
       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="alignPage">
       <widget class="QLabel" name="align_desc">
@@ -601,6 +601,99 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba
        </property>
        <property name="text">
         <string>Start Demo</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="compareDesc">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>60</y>
+         <width>451</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Helvetica Neue</family>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(200, 255, 240);</string>
+       </property>
+       <property name="text">
+        <string>SenseTime's facial comparison framework is used extract data about facial features and is used to compare faces, determining whether or not two images (each with a single face only) have the same person in them.</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectPost_2">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>160</y>
+         <width>231</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 40px;
+border-top-left-radius: 0px;
+border-image: url(:/images/images/compare_success.webp)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectTitle_2">
+       <property name="geometry">
+        <rect>
+         <x>75</x>
+         <y>10</y>
+         <width>361</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Helvetica Neue</family>
+         <pointsize>23</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white
+</string>
+       </property>
+       <property name="text">
+        <string>Facial Comparison Demonstration</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detectPre_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>231</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 40px;
+border-top-left-radius: 0px;
+border-image: url(:/images/images/compare_failed.webp)</string>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>

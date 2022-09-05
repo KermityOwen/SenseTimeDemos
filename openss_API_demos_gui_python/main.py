@@ -25,10 +25,11 @@ class MainWindow(QMainWindow):
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
-
+    # overridden
     def mousePressEvent(self, event):
         self.oldPos = event.globalPos()
 
+    # overridden
     def mouseMoveEvent(self, event):
         delta = QPoint(event.globalPos() - self.oldPos)
         self.move(self.x() + delta.x(), self.y() + delta.y())

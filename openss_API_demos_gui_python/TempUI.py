@@ -1,5 +1,13 @@
 # -*- coding: utf-8 -*-
 
+################################################################################
+## Form generated from reading UI file 'MainMenu.ui'
+##
+## Created by: Qt User Interface Compiler version 6.3.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -9,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QPushButton,
     QSizePolicy, QStackedWidget, QWidget)
-import res
+import res_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -259,6 +267,33 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(187, 20, 20, 255), stop:1 rgba(255, 179, 20, 255));\n"
 "}")
+        self.compareDesc = QLabel(self.comparePage)
+        self.compareDesc.setObjectName(u"compareDesc")
+        self.compareDesc.setGeometry(QRect(25, 60, 451, 80))
+        self.compareDesc.setFont(font3)
+        self.compareDesc.setStyleSheet(u"color: rgb(200, 255, 240);")
+        self.compareDesc.setTextFormat(Qt.RichText)
+        self.compareDesc.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.compareDesc.setWordWrap(True)
+        self.detectPost_2 = QLabel(self.comparePage)
+        self.detectPost_2.setObjectName(u"detectPost_2")
+        self.detectPost_2.setGeometry(QRect(245, 160, 231, 171))
+        self.detectPost_2.setStyleSheet(u"border-radius: 40px;\n"
+"border-top-left-radius: 0px;\n"
+"border-image: url(:/images/images/compare_success.webp)")
+        self.detectTitle_2 = QLabel(self.comparePage)
+        self.detectTitle_2.setObjectName(u"detectTitle_2")
+        self.detectTitle_2.setGeometry(QRect(75, 10, 361, 40))
+        self.detectTitle_2.setFont(font4)
+        self.detectTitle_2.setStyleSheet(u"color: white\n"
+"")
+        self.detectTitle_2.setAlignment(Qt.AlignCenter)
+        self.detectPre_2 = QLabel(self.comparePage)
+        self.detectPre_2.setObjectName(u"detectPre_2")
+        self.detectPre_2.setGeometry(QRect(10, 160, 231, 171))
+        self.detectPre_2.setStyleSheet(u"border-radius: 40px;\n"
+"border-top-left-radius: 0px;\n"
+"border-image: url(:/images/images/compare_failed.webp)")
         self.mainPages.addWidget(self.comparePage)
         self.ocrPage = QWidget()
         self.ocrPage.setObjectName(u"ocrPage")
@@ -278,10 +313,10 @@ class Ui_MainWindow(object):
         self.mainPages.addWidget(self.ocrPage)
         self.posePage = QWidget()
         self.posePage.setObjectName(u"posePage")
-        self.detectDemo_3 = QPushButton(self.posePage)
-        self.detectDemo_3.setObjectName(u"detectDemo_3")
-        self.detectDemo_3.setGeometry(QRect(180, 370, 120, 40))
-        self.detectDemo_3.setStyleSheet(u"QPushButton{\n"
+        self.poseDemo = QPushButton(self.posePage)
+        self.poseDemo.setObjectName(u"poseDemo")
+        self.poseDemo.setGeometry(QRect(180, 370, 120, 40))
+        self.poseDemo.setStyleSheet(u"QPushButton{\n"
 "border-radius: 12px;\n"
 "border: 2px solid white;\n"
 "background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(167, 0, 0, 255), stop:1 rgba(252, 159, 0, 255));\n"
@@ -308,7 +343,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainPages.setCurrentIndex(4)
+        self.mainPages.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -344,7 +379,11 @@ class Ui_MainWindow(object):
         self.detectDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
         self.detectPost.setText("")
         self.compareDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
+        self.compareDesc.setText(QCoreApplication.translate("MainWindow", u"SenseTime's facial comparison framework is used extract data about facial features and is used to compare faces, determining whether or not two images (each with a single face only) have the same person in them.", None))
+        self.detectPost_2.setText("")
+        self.detectTitle_2.setText(QCoreApplication.translate("MainWindow", u"Facial Comparison Demonstration", None))
+        self.detectPre_2.setText("")
         self.ocrDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
-        self.detectDemo_3.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
+        self.poseDemo.setText(QCoreApplication.translate("MainWindow", u"Start Demo", None))
     # retranslateUi
 

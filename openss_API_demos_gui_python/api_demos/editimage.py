@@ -26,15 +26,32 @@ def drawPoints(image, arr):
         cv2.line(image, (i[0], i[1]), (i[0], i[1]), (0, 0, 255), 5)
 
 def showCompare(im1_path, im2_path, compared):
-
+    """
+    Opens a window showing the results of whether the faces match or don't. Image is generated with OpenCV.
+    :param im1_path: Path of first image
+    :param im2_path: Path of second image
+    :param compared: Result of whether the faces match or not
+    :return: None
+    """
     if not compared:
-        compared = " doesn't"
+        compared = "doesn't"
     else:
-        compared = ""
+        compared = "do"
+
     im1, im2 = cv2.imread(im1_path), cv2.imread(im2_path)
-    image = np.concatenate((im1, im2), axis=0)
-    image = cv2.putText(image, "These two images%s contain the same person"%compared, (50, 50), cv2.FONT_HERSHEY_DUPLEX, 1, (0,0,0), 2, cv2.LINE_AA)
+    im1, im2 = imutils.resize(im1, height=500), imutils.resize(im2, height=500)
+    image = np.concatenate((im1, im2), axis=1)
+
+    text_size, _ = cv2.getTextSize("Faces %s match"%compared, cv2.FONT_HERSHEY_DUPLEX, 1, 2)
+    text_w, text_h = text_size
+
+    # Explanation for this code snippet is the same as the one in showPoseImage()
+    # Scroll down for more details on how to understand
+
+    image = cv2.rectangle(image, (20, 20), (40 + text_w, 40 + text_h), (250, 50, 50), -1)
+    image = cv2.putText(image, "Faces %s match"%compared, (30, 50), cv2.FONT_HERSHEY_DUPLEX, 1, (0,0,0), 2, cv2.LINE_4)
     image = imutils.resize(image, width=500)
+
     cv2.imshow("image", image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
